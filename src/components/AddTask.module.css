@@ -1,0 +1,67 @@
+form {
+  max-width: 400px;
+  padding: 20px;
+  background: #faf7f5;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  font-family: system-ui, sans-serif;
+}
+
+label {
+  display: block;
+  margin-bottom: 12px;
+  color: #444;
+  font-size: 0.9rem;
+}
+
+input {
+    color: #c89b7b;
+}
+select {
+  width: 100%;
+  margin-top: 4px;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #c89b7b;
+  background-color: #fff;
+}
+
+select {
+  margin-bottom: 12px;
+}
+
+.rewards {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.rewards select {
+  flex: 2;
+}
+
+.rewards input {
+  flex: 1;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #c89b7b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background: #b28566;
+}
