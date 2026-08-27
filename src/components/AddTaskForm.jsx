@@ -17,7 +17,14 @@ export default function AddTaskForm() {
 
     function addTaskbdd(formData){
         const title = formData.get("title");
-        addTask(title);
+        const deadline = formData.get("deadline");
+        console.log("deadline : ", deadline);
+        const final = null;
+        if (deadline != ""){
+            final = deadline + " 00:00:00";
+        }
+        console.log("final : ", final);
+        addTask(title, final);
         setRender(prev => !prev);
     }
 
@@ -31,6 +38,10 @@ export default function AddTaskForm() {
             <label className={styles.label}>
                 Title :
                 <input className={styles.input} name='title'/>
+            </label>
+            <label className={styles.label}>
+                Deadline :
+                <input className={styles.input} name='deadline' type='date'/>
             </label>
             <button className={styles.submit} type="submit">ADD</button>
         </form>

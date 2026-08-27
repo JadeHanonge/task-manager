@@ -9,8 +9,8 @@ export const getAllStatus = () => {
     return axiosClient.get("/status");
 }
 
-export const addTask = (titre) => {
-    return axiosClient.post("/addTask", {title: titre});
+export const addTask = (titre, deadline) => {
+    return axiosClient.post("/addTask", {title: titre, deadline: deadline});
 }
 
 export const updateStatus = (task_id, state) => {
