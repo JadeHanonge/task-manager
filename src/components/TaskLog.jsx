@@ -67,7 +67,12 @@ export default function TaskLog() {
                                 onChange={() => toggleTask(t.id)}
                             />
                             <label>{t.title}</label>
-                            <p>{t.description}</p>
+                            <p>{t.deadline
+                            ? new Date(t.deadline).toLocaleDateString('fr-FR', {
+                                year: 'numeric',
+                                month: 'long',
+                                day: 'numeric'
+                            }): ''}</p>
                             <button onClick={() => toggleDeleteTask(t.id)}>DELETE</button>
                         </li>
                     ))}
